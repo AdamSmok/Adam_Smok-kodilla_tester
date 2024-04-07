@@ -1,14 +1,10 @@
 import java.util.Scanner;
 
 public class LeapYear {
-    //sprawdzam czy rok jest przestępny
-    private static boolean leap(int year) {
-        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
-    }
 
-    //pobieram dane od użytkownika
     public static void main(String[] args) {
         System.out.println("Podaj rok do sprawdzenia.");
+        //pobieram dane od użytkownika
         Scanner read = new Scanner(System.in);
         int year = read.nextInt();
 
@@ -17,6 +13,11 @@ public class LeapYear {
         } else {
             System.out.println("Podany rok nie jest przestepny.");
         }
+    }
+
+    //sprawdzam czy rok jest przestępny
+    private static boolean leap(int year) {
+        return ((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0);
     }
 }
 
