@@ -1,3 +1,5 @@
+package Modul_2_4;
+
 public class Grades_test {
     public static void main(String[] args) {
         Grades student1 = new Grades();
