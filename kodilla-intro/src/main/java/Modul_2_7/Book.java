@@ -1,16 +1,16 @@
 package Modul_2_7;
 
 public class Book {
-    private String author;
-    private String title;
+    private final String author;
+    private final String title;
 
-    public Book(String title, String author) {
+    public Book(String author, String title) {
         this.title = title;
         this.author = author;
     }
 
     public static Book of(String author, String title) {
-        return new Book("Isaac Asimov", "The Galaxy");
+        return new Book(author, title);
     }
 
     public void getTitle() {
