@@ -9,7 +9,7 @@ public class Book {
         this.author = author;
     }
 
-    static Book of() {
+    public static Book of(String author, String title) {
         return new Book("Isaac Asimov", "The Galaxy");
     }
 
@@ -22,3 +22,4 @@ public class Book {
     }
 
 }
+
