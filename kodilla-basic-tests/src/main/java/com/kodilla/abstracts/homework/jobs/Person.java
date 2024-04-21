@@ -5,13 +5,10 @@ public class Person {
     public int age;
     public Job job;
 
-    public Person() {
-
-    }
-    public Person(String firstName, int age) {
+    public Person(String firstName, int age, Job job) {
         this.firstName = firstName;
         this.age = age;
-        //this.job = job;
+        this.job = job;
     }
 
     public String getFirstName() {
