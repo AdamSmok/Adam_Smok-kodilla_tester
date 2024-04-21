@@ -18,12 +18,12 @@ public class Application {
         if (addCorrect) {
             System.out.println("Metoda 'add' działa poprawnie dla a=" + a + " i dla b=" + b);
         } else {
-            System.out.println("Metoda 'add' nie działa poprawnie dla a=" + a + " i dla b=" + b + " Zwrócony wynik to: " + addResult);
+            System.out.println("\u001B[31m" + "Metoda 'add' nie działa poprawnie dla a=" + a + " i dla b=" + b + " Zwrócony wynik to: " + addResult + "\u001B[0m");
         }
         if (subCorrect) {
             System.out.println("Metoda 'sub' działa poprawnie dla a=" + a + " i dla b=" + b);
         } else {
-            System.out.println("Metoda 'sub' nie działa poprawnie dla a=" + a + " i dla b=" + b + " Zwrócony wynik to: " + subResult);
+            System.out.println("\u001B[31m" + "Metoda 'sub' nie działa poprawnie dla a=" + a + " i dla b=" + b + " Zwrócony wynik to: " + subResult + "\u001B[0m");
         }
         if (powCorrect) {
             System.out.println("Metoda 'pow' działa poprawnie dla a=" + a + " i dla b=" + b);
