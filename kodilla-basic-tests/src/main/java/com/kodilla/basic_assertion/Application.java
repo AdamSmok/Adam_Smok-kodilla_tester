@@ -10,7 +10,7 @@ public class Application {
         int powResult = calc.pow(a, b);
         boolean addCorrect = ResultChecker.assertEquals(a + b, addResult);
         boolean subCorrect = ResultChecker.assertEquals(a - b, subResult);
-        boolean powCorrect = ResultChecker.assertEquals((int)Math.pow(a, b), powResult);
+        boolean powCorrect = ResultChecker.assertEquals((int) Math.pow(a, b), powResult);
         if (addCorrect) {
             System.out.println("Metoda 'add' działa poprawnie dla a=" + a + " i dla b=" + b + " Zwrócony wynik to: " + addResult);
         } else {
