@@ -29,6 +29,15 @@ public class CalculatorTestSuite {
         double a = 2;
         double b = -2;
         double powResult = calculator.pow(a, b);
-        assertEquals(0.25, powResult, 0.00001);
+        assertEquals(Math.pow(a,b), powResult, 0.00001);
     }
+    @Test
+    public void testPow2() {
+        Calculator calculator = new Calculator();
+        double a = 2;
+        double b = 0;
+        double powResult = calculator.pow(a, b);
+        assertEquals(Math.pow(a,b), powResult, 0.00001);
+    }
+
 }
