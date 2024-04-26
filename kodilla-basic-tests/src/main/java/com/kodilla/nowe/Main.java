@@ -2,7 +2,7 @@ package com.kodilla.nowe;
 
 public class Main {
     public static void main(String[] args) {
-
+        int cashMachineCount = 3;
         CashMachine cashMachine1 = new CashMachine();
         cashMachine1.addTransaction(100);
         cashMachine1.addTransaction(-50);
@@ -13,7 +13,7 @@ public class Main {
         cashMachine2.addTransaction(200);
 
 
-        Bank bank = new Bank();
+        Bank bank = new Bank(cashMachineCount);
         bank.addCashMachine(cashMachine1);
         bank.addCashMachine(cashMachine2);
 

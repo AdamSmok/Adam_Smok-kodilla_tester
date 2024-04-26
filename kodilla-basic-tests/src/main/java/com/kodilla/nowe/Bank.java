@@ -2,11 +2,12 @@ package com.kodilla.nowe;
 class Bank {
     private CashMachine[] cashMachines;
     private int size;
-    private static final int cashMachineCount = 3;
+    private int cashMachineCount = 3;
 
-    public Bank() {
-        cashMachines = new CashMachine[cashMachineCount];
-        size = 0;
+    public Bank(int cashMachineCount) {
+        this.cashMachines = new CashMachine[cashMachineCount];
+        this.size = 0;
+        this.cashMachineCount = cashMachineCount;
     }
 
     public void addCashMachine(CashMachine cashMachine) {
