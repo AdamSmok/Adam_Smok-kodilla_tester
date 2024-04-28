@@ -10,7 +10,6 @@ public class CarsApplication {
         switch (typeOfCar) {
             case 0:
                 return new Kia("Kia", 10.0, 15, 15);
-            //nie wiem dlaczego ale po tych RETURNACH "break" jest nieakceplowalne
             case 1:
                 return new RAM("RAM", 20.0, 10, 5);
             case 2:
