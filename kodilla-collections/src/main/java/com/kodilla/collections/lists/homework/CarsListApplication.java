@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CarsListApplication {
     public static void main(String[] args) {
-        int numerElementuDoUsuniecia = 0;
+        int elementToBeDeleted = 0;
         List<Car> cars = new ArrayList<>();
         Middle middleCar = new Middle(6, 50);
         cars.add(new Expensive(10, 100));
@@ -15,9 +15,9 @@ public class CarsListApplication {
         cars.add(new Cheap(5, 20));
 
         printInfo(cars);
-        System.out.println("Usuwam element nr: " + numerElementuDoUsuniecia);
-        cars.remove(numerElementuDoUsuniecia);
-        System.out.println("Usuwam element " + middleCar);
+        System.out.println("Deleting element number: " + elementToBeDeleted);
+        cars.remove(elementToBeDeleted);
+        System.out.println("Deleting element " + middleCar);
         cars.remove(middleCar);
         printInfo(cars);
     }
