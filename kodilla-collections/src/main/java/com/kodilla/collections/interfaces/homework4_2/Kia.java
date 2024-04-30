@@ -1,13 +1,12 @@
 package com.kodilla.collections.interfaces.homework4_2;
 
 public class Kia implements Car {
-    private String name = null;
+    protected final String name = "Kia";
     private double accelerate = 0;
     private double brake = 0;
     private double speed = 0;
 
-    public Kia(String name, double accelerate, double brake, double speed) {
-        this.name = name;
+    public Kia(double accelerate, double brake, double speed) {
         this.accelerate = accelerate;
         this.brake = brake;
         this.speed = speed;
@@ -24,10 +23,8 @@ public class Kia implements Car {
     }
 
     @Override
-    public void decreaseSpeed() {
-        speed -= brake;
-    }
-    public String getName(){
-        return name;
-    }
+    public void decreaseSpeed() { speed -= brake; }
+
+    @Override
+    public String getName(){ return name; }
 }

@@ -9,11 +9,11 @@ public class CarsApplication {
 
         switch (typeOfCar) {
             case 0:
-                return new Kia("Kia", 10.0, 15, 15);
+                return new Kia(10.0, 15, 15);
             case 1:
-                return new RAM("RAM", 20.0, 10, 5);
+                return new RAM(20.0, 10, 5);
             case 2:
-                return new Toyota("Toyota", 12, 20, 20);
+                return new Toyota(12, 20, 20);
             default:
                 return null;
         }
