@@ -1,13 +1,12 @@
 package com.kodilla.collections.interfaces.homework;
 
 public class RAM implements Car {
-    private String name = null;
+    protected final String name = "RAM";
     private double accelerate = 0;
     private double brake = 0;
     private double speed = 0;
 
-    public RAM(String name, double accelerate, double brake, double speed) {
-        this.name = name;
+    public RAM(double accelerate, double brake, double speed) {
         this.accelerate = accelerate;
         this.brake = brake;
         this.speed = speed;
@@ -26,7 +25,10 @@ public class RAM implements Car {
     @Override
     public void decreaseSpeed() {
         speed -= brake;
+        if(speed<0){speed = 0;}
     }
+
+    @Override
     public String getName(){
         return name;
     }

@@ -2,11 +2,11 @@ package com.kodilla.collections.interfaces.homework;
 
 public class CarRace {
     public static void main(String[] args) {
-        Car kia = new Kia("Kia",10.0, 15, 15);
+        Car kia = new Kia(10.0, 15, 15);
         doRace(kia);
-        Car ram = new RAM("RAM",20.0, 10, 5);
+        Car ram = new RAM(20.0, 10, 5);
         doRace(ram);
-        Car toyota = new Toyota("Toyota",12, 20, 20);
+        Car toyota = new Toyota(12, 20, 20);
         doRace(toyota);
     }
 
