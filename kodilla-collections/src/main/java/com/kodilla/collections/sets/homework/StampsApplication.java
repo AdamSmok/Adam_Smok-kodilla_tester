@@ -12,10 +12,13 @@ public class StampsApplication {
         stamps.add(new Stamp("Yoda",1,1,false));
         stamps.add(new Stamp("Darth Vader",3,2,false));
         stamps.add(new Stamp("Jar Jar Binks",2,2,true));
-        showStampsCollection(stamps);
+
+        StampsApplication stampsApplication = new StampsApplication();
+        stampsApplication.showStampsCollection(stamps);
+        //showStampsCollection(stamps);
     }
 
-    public static void showStampsCollection(Set stamps){
+    public void showStampsCollection(Set stamps){
         System.out.println(stamps.size());
         for(Object stamp : stamps){
             System.out.println(stamp);

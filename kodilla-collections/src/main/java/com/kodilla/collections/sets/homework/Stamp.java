@@ -6,13 +6,13 @@ public class Stamp {
     private String name = null;
     private double height = 0;
     private double width = 0;
-    private boolean isMarked = false;
+    private boolean isStamped = false;
 
-    public Stamp(String name, double height, double width, boolean isMarked) {
+    public Stamp(String name, double height, double width, boolean isStamped) {
         this.name = name;
         this.height = height;
         this.width = width;
-        this.isMarked = isMarked;
+        this.isStamped = isStamped;
     }
 
     public String getName() {
@@ -27,8 +27,8 @@ public class Stamp {
         return width;
     }
 
-    public boolean isMarked() {
-        return isMarked;
+    public boolean isStamped() {
+        return isStamped;
     }
 
     @Override
@@ -36,12 +36,12 @@ public class Stamp {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Stamp stamp = (Stamp) o;
-        return Double.compare(height, stamp.height) == 0 && Double.compare(width, stamp.width) == 0 && isMarked == stamp.isMarked && Objects.equals(name, stamp.name);
+        return Double.compare(height, stamp.height) == 0 && Double.compare(width, stamp.width) == 0 && isStamped == stamp.isStamped && Objects.equals(name, stamp.name);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(name, height, width, isMarked);
+        return Objects.hash(name, height, width, isStamped);
     }
 
     @Override
@@ -50,7 +50,7 @@ public class Stamp {
                 "name='" + name + '\'' +
                 ", height=" + height +
                 ", width=" + width +
-                ", isMarked=" + isMarked +
+                ", isMarked=" + isStamped +
                 '}';
     }
 }
