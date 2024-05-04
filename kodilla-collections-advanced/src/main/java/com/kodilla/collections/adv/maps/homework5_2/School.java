@@ -18,8 +18,8 @@ public class School {
 
     public int getTotalCountOfStudents() {
         int sum = 0;
-        for (int grade : school)
-            sum += grade;
+        for (int studentsCountPerClass : school)
+            sum += studentsCountPerClass;
         return sum;
     }
 }
