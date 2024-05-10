@@ -1,8 +1,10 @@
 package com.kodilla.optional.homework;
 
+import java.util.Optional;
+
 public class Student {
-    String name = null;
-    Teacher teacher = null;
+    private final String name;
+    private final Teacher teacher;
 
     public Student(String name, Teacher teacher) {
         this.name = name;
@@ -13,7 +15,7 @@ public class Student {
         return name;
     }
 
-    public Teacher getTeacher() {
-        return teacher;
+    public Optional<Teacher> getTeacher() {
+        return Optional.ofNullable(teacher);
     }
 }
