@@ -24,16 +24,16 @@ public class GamblingMachine {
         }
     }
 
-    private boolean isAnyNumberOutOfDeclaredScope(Set<Integer> numbers) {
+    public boolean isAnyNumberOutOfDeclaredScope(Set<Integer> numbers) {
         return numbers.stream()
                 .anyMatch(number -> number < 1 || number > 49);
     }
 
-    private boolean isNotCorrectSize(Set<Integer> numbers) {
+    public boolean isNotCorrectSize(Set<Integer> numbers) {
         return numbers.size() != 6;
     }
 
-    private Set<Integer> generateComputerNumbers() {
+    public Set<Integer> generateComputerNumbers() {
         Set<Integer> numbers = new HashSet<>();
         Random generator = new Random();
         while(numbers.size() < 6) {
