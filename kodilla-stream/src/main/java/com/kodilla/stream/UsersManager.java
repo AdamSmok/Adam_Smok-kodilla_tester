@@ -15,18 +15,26 @@ public class UsersManager {
         }
         String partOfName = "man";
         System.out.println("\nUsers with name matching '" + partOfName + "' :");
+
         for (User u : filterUsersContainingString(partOfName)) {
             System.out.println(u.getUsername());
         }
+       // filterUsersContainingString(partOfName).stream().forEach(u -> u::getUsername);
+
     }
 
     public static List<String> filterChemistGroupUsernames() {
-        List<String> usernames = UsersRepository.getUsersList()
+/*        List<String> usernames = UsersRepository.getUsersList()
                 .stream()
                 .filter(user -> user.getGroup().equals("Chemists"))
                 .map(UsersManager::getUserName)         // [1]
                 .collect(Collectors.toList());
-        return usernames;
+        return usernames;*/
+        return UsersRepository.getUsersList()
+                .stream()
+                .filter(user -> user.getGroup().equals("Chemists"))
+                .map(UsersManager::getUserName)         // [1]
+                .collect(Collectors.toList());
     }
 
     public static String getUserName(User user) {
