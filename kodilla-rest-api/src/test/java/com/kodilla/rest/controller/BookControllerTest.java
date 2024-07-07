@@ -2,6 +2,8 @@ package com.kodilla.rest.controller;
 
 import com.kodilla.rest.domain.BookDto;
 import com.kodilla.rest.service.BookService;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
@@ -13,11 +15,23 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class BookControllerTest {
 
+    private static BookService bookServiceMock;
+    private BookController bookController;
+
+    @BeforeAll
+    static void setBeforeAll(){
+        bookServiceMock = Mockito.mock(BookService.class);
+    }
+
+    @BeforeEach
+    void setBeforeEach(){
+        bookController =new BookController(bookServiceMock);
+    }
+
+
     @Test
     void shouldFetchBooks() {
         //given
-        BookService bookServiceMock = Mockito.mock(BookService.class);
-        BookController bookController = new BookController(bookServiceMock);
         List<BookDto> booksList = new ArrayList<>();
         booksList.add(new BookDto("Title 1", "Author 1"));
         booksList.add(new BookDto("Title 2", "Author 2"));
@@ -33,8 +47,6 @@ class BookControllerTest {
     @Test
     void shouldAddBook() {
         //given
-        BookService bookServiceMock = Mockito.mock(BookService.class);
-        BookController bookController = new BookController(bookServiceMock);
         BookDto newBook = new BookDto("New Title", "New Author");
 
         //when
