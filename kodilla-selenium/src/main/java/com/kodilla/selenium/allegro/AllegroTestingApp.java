@@ -10,9 +10,9 @@ public class AllegroTestingApp {
             System.setProperty("webdriver.chrome.driver", "C:/selenium-drivers/Chrome_Driver_x64/chromedriver-win64/chromedriver.exe");
             WebDriver driver = new ChromeDriver();
             driver.get("https://www.ebay.com/");
-            WebElement category = driver.findElement(By.name("_sacat"));
+            WebElement category = driver.findElement(By.xpath("//*[@id=\"gh-cat\"]"));
             category.sendKeys("Cameras & Photo");
-            WebElement inputField = driver.findElement(By.name("_nkw"));
+            WebElement inputField = driver.findElement(By.xpath("//*[@id=\"gh-ac\"]"));
             inputField.sendKeys("Mavic mini");
             inputField.submit();
         }
