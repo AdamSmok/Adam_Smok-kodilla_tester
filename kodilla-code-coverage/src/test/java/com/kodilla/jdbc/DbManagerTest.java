@@ -4,7 +4,6 @@ import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.Assertions;
-
 import java.sql.Connection;
 import java.sql.DatabaseMetaData;
 import java.sql.ResultSet;
@@ -88,10 +87,8 @@ class DbManagerTest {
             counter++;
         }
 
-        // Print the total number of users found
         System.out.printf("Total number of users with at least two posts: %d%n", counter);
 
-        // Assertion to verify the number of users with at least two posts
         String countQuery =
                 "SELECT COUNT(*) " +
                         "FROM ( " +
